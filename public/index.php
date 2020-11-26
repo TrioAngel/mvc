@@ -2,6 +2,10 @@
 
 //echo "Requested URL: " . $_SERVER['QUERY_STRING'];
 
+//Require the controller class
+require '../App/Controllers/Posts.php';
+
+
 //Routing
 require '../Core/Router.php';
 
@@ -16,7 +20,7 @@ $router->add('posts', ['controller' => 'Posts', 'action' => 'index']);
 $router->add('admin/{action}/{controller}');
 $router->add('{controller}/{action}');
 $router->add('{controller}/{id:\d+}/{action}');
-
+/*
 //Display the routing table
 echo '<pre>';
 //print_r($router->getRoutes());
@@ -32,4 +36,6 @@ if($router->match($url)){
   echo '</pre>';
 } else {
   echo "no route found for URL '$url'";
-}
+}*/
+
+$router->dispatch($_SERVER['QUERY_STRING']);

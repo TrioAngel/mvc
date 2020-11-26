@@ -22,6 +22,51 @@ protected $params = [];
  *
  * return void*/
 
+public function dispatch($url){
+  if($this->match($url)){
+    $controller = $this->params['controller'];
+    $controller = $this->convertToStudlyCaps($controller);
+
+    if(class_exists($controller)){
+      $controller_object = new $controller();
+
+      $action = $this->params['action'];
+      $action = $this->convertToCamelCase($action);
+
+      if(is_callable([$controller_object, $action])){
+        $controller_object->$action();
+      } else {
+        echo "Method $action (in controller $controller) not found";
+      }
+    } else {
+      echo "Controller class $controller not found";
+    }
+  } else {
+    echo 'no route matched';
+  }
+}
+
+/*
+ * Convert the string with hyphens to StudylyCaps
+ * e.q. port-authors => PostAuthors
+ *
+ * @param string $string the string to cpnvert
+ * @return string*/
+protected function convertToStudlyCaps($string){
+  return str_replace(' ', '', ucwords(str_replace('-', ' ', $string)));
+}
+
+/*
+ * Convert the string with hyphens to camelcase,
+ * e.g. add-new =? addNew
+ * @param string $string the string to convert
+ * @return string*/
+
+protected function convertToCamelCase($string){
+  return lcfirst($this->convertToStudlyCaps($string));
+}
+
+
 public function add ($route, $params = []){
 //Convert the rout to a regExp:escape forward slashes
   $route = preg_replace('/\//', '\\/', $route);
