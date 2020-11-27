@@ -1,2 +1,6 @@
 .idea/
 public/.htaccess
+composer.json
+composer.lock
+vendor/composer
+vendor/symfony

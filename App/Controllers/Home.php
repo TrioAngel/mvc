@@ -12,9 +12,14 @@ class Home extends \Core\Controller {
  * @return void*/
 public function indexAction(){
 //  echo "hello from the index action in the Home controller";
-  View::render('Home/index.php', [
+  /*View::render('Home/index.php', [
     'name' => 'Dave',
     'colours' => ['red', 'green', 'yellow']
+  ]);*/
+
+  View::renderTemplate('Home/index.html', [
+    'name' => 'Hello',
+    'colours' => ['red', 'blue']
   ]);
 }
 

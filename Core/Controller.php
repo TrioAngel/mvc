@@ -6,7 +6,7 @@ namespace Core;
 
 abstract class Controller {
   /*
-   * Parameters from thhe matched route
+   * Parameters from the matched route
    * @var array
    * */
 
