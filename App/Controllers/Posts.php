@@ -1,13 +1,18 @@
 <?php
 
 namespace App\Controllers;
+use \Core\View;
 
 class Posts extends \Core\Controller {
   /*
    * Show the index page
    * @return void*/
   public function indexAction(){
-    echo "Hello from the index action in the Post controller";
+//    echo "Hello from the index action in the Post controller";
+    View::renderTemplate('Home/index.html', [
+      'name' => 'hello',
+      'colours' => ['red', 'blue']
+    ]);
     //echo '<p>Query string parameters: <pre>' . htmlspecialchars(print_r($_GET, true)) . '</pre></p>';
   }
 
