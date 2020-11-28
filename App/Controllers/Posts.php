@@ -9,7 +9,7 @@ class Posts extends \Core\Controller {
    * @return void*/
   public function indexAction(){
 //    echo "Hello from the index action in the Post controller";
-    View::renderTemplate('Home/index.html', [
+    View::renderTemplate('Posts/index.html', [
       'name' => 'hello',
       'colours' => ['red', 'blue']
     ]);
