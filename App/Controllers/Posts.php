@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\Post;
 use \Core\View;
 
 class Posts extends \Core\Controller {
@@ -8,12 +9,11 @@ class Posts extends \Core\Controller {
    * Show the index page
    * @return void*/
   public function indexAction(){
-//    echo "Hello from the index action in the Post controller";
+    $posts = Post::getAll();
     View::renderTemplate('Posts/index.html', [
-      'name' => 'hello',
-      'colours' => ['red', 'blue']
+      'posts' => $posts
     ]);
-    //echo '<p>Query string parameters: <pre>' . htmlspecialchars(print_r($_GET, true)) . '</pre></p>';
+
   }
 
   /*
