@@ -1,9 +1,15 @@
 <?php
 
-/*
+
+/**
+ * Composer
+ */
+require '../vendor/autoload.php';
+
+
+/**
  * Twig
- * */
-  require_once dirname(__DIR__) . '/vendor/twig/lib/Twig/Autoloader.php';
+ */
 Twig_Autoloader::register();
 
 /*
