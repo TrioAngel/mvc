@@ -14,3 +14,12 @@ Thrown in 'C:\wamp\www\MVC\Core\Router.php' on line 49
 Stack trace: #0 C:\wamp\www\MVC\public\index.php(44): Core\Router->dispatch('asda')
 #1 {main}
 Thrown in 'C:\wamp\www\MVC\Core\Router.php' on line 49
+[30-Nov-2020 10:47:27 UTC] Uncaught exception: 'Exception'With message 'no route matched.'
+Stack trace: #0 C:\wamp\www\MVC\public\index.php(44): Core\Router->dispatch('asd')
+#1 {main}
+Thrown in 'C:\wamp\www\MVC\Core\Router.php' on line 49
+[30-Nov-2020 10:48:08 UTC] Uncaught exception: 'Exception'With message 'Method neeAction not found in controller App\Controllers\Posts'
+Stack trace: #0 C:\wamp\www\MVC\Core\Router.php(41): Core\Controller->__call('nee', Array)
+#1 C:\wamp\www\MVC\public\index.php(44): Core\Router->dispatch('posts/nee')
+#2 {main}
+Thrown in 'C:\wamp\www\MVC\Core\Controller.php' on line 34
