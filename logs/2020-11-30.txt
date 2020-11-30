@@ -1,0 +1,16 @@
+[30-Nov-2020 09:43:44 UTC] Uncaught exception: 'Exception'With message 'no route matched'
+Stack trace: #0 C:\wamp\www\MVC\public\index.php(44): Core\Router->dispatch('someasd')
+#1 {main}
+Thrown in 'C:\wamp\www\MVC\Core\Router.php' on line 50
+[30-Nov-2020 09:43:44 UTC] Uncaught exception: 'Exception'With message 'no route matched'
+Stack trace: #0 C:\wamp\www\MVC\public\index.php(44): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\wamp\www\MVC\Core\Router.php' on line 50
+[30-Nov-2020 10:37:47 UTC] Uncaught exception: 'Exception'With message 'no route matched.'
+Stack trace: #0 C:\wamp\www\MVC\public\index.php(44): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\wamp\www\MVC\Core\Router.php' on line 49
+[30-Nov-2020 10:38:43 UTC] Uncaught exception: 'Exception'With message 'no route matched.'
+Stack trace: #0 C:\wamp\www\MVC\public\index.php(44): Core\Router->dispatch('asda')
+#1 {main}
+Thrown in 'C:\wamp\www\MVC\Core\Router.php' on line 49
